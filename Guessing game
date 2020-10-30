@@ -1,0 +1,25 @@
+secret_no= 18
+guess_no = 9
+
+while True :
+    guess= int(input("Enter a no."))
+    guess_no -= 1
+    if guess_no != 0 :
+        if   14 <= guess < secret_no or 19 <= guess < 24:
+            print("You are close")
+            print("no of guesses left= ", guess_no)
+        elif 5 <= guess < 14 :
+            print("Try harder")
+            print("no. of guesses left =" , guess_no )
+        elif 1 <= guess < 5 :
+            print("Far away")
+            print("no of guesses left =  ", guess_no)
+        elif guess == secret_no :
+            print("You are correct")
+            break
+        else:
+            print("Out of range")
+            print("no. of guesses left =", guess_no)
+    else :
+        print("You are out of guesses : You failed")
+        break
